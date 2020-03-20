@@ -1,19 +1,9 @@
-/*-----Javascript for Project Name */
-
-
-
 /* =========================================
-            contact__form--text js-input
+           Simple-Contact-Form Scripts
 ============================================ */
-$(function () {
 
-});
-
-/* =========================================
-            contact__form validation
-============================================ */
 $(function () {
-   //js-input class - toggles not-empty class for input fields
+   //js-input class - toggles not-empty class for contact__form--text
    $('.js-input').keyup(function () {
       if ($(this).val()) {
          $(this).addClass('not-empty');
@@ -144,25 +134,7 @@ $(function () {
             $('#contact__form--submit').val('Message Sent');
             $('#success__message').show(1000);
          }, 3000);
-
-         
-         // $('#contact__form--reusable').each(function() {
-         //    this.reset();
-         //    let message = "";
-         //    isNameValid = false;
-         //    isEmailValid = false;
-         //    isMessageValid = false;
-
-         //    getPrompt(message, "contact__form--name-prompt", red);
-         //    getPrompt(message, "contact__form--email-prompt", red);
-         //    getPrompt(message, "contact__form--message-prompt", red);
-         //    $('contact__form--name').val().length = 0;
-         // });
-
-         // $('contact__form--email').val('');
-         // $('contact__form--message').val('');
       }
-
    } //end of the performValidForm Function
 
    //performInvalidForm Function -
@@ -208,7 +180,6 @@ $(function () {
          $('#error__message').append(`<p>${message}!!</p>`);
 
       }
-
    } //end of the updateErrors Function
 
    //checkFormValidation Function -
@@ -220,7 +191,6 @@ $(function () {
          performInvalidForm();
 
       }
-
    } //end of the checkFormValidation Function
 
    $('#contact__form--name').keyup(checkNameInput);
