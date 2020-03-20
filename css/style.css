@@ -1,0 +1,510 @@
+/*-----Stylesheet for Project Name-----*/
+/*
+CSS Property Declaration Style
+example--
+.declaration-order {
+  ---POSITIONING---
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  ---BOX-MODAL---
+  display: block;
+  float: right;
+  width: 100vw;
+  height: 100vh;
+  margin-right: .5em;
+  margin-left: .5em;
+  margin-top: 1em;
+  margin-bottom: .75em;
+  padding-right: .25em;
+  padding-left: .33em padding-top: .125em;
+  padding-bottom: .125em;
+  ---TYPOGRAPHY---
+  font-family: 'Arial', sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  font-style: inherit;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  ---VISUAL---
+  background: url(../img/background.png);
+  background-color: #2345af;
+  border: 1px solid #e5e535;
+  border-radius: 8px;
+  --MISCELLANEOUS---
+  opacity: 0.8;
+  transition: all 0.5s linear;
+/* 
+font-family: 'Roboto Mono', monospace;
+font-family: 'Lato', sans-serif;
+ */
+
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+*::-moz-focus-inner {
+  border: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+/* =========================================
+                Root, Html, and Body
+============================================ */
+:root {
+  --light-blue: #7898af;
+  --med-blue: #334155;
+  --light-gray: #e2e2e4;
+  --med-gray: #a9a9a9;
+  --dark-gray: #626262;
+
+  --black: #20212d;
+  --off-black: #393b3d;
+  --white: #ffffff;
+}
+
+html {
+  font-size: 100%;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  color: var(--black);
+  background-color: rgb(238, 236, 236);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lora", serif;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: .8125rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+section {
+  background: var(--white);
+  overflow: hidden;
+}
+
+/* =========================================
+              Utility Classes
+============================================ */
+.ma-container-fluid {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.ma-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 576px) {
+  .ma-container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .ma-container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .ma-container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ma-container {
+    max-width: 1140px;
+  }
+}
+
+.content-box-lg {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 1.25em;
+}
+
+.img-responsive {
+  vertical-align: middle;
+}
+
+.img-thumbnail {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.img-responsive,
+.thumbnail>img,
+.thumbnail a>img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+  width: 100vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.title-heading {
+  position: relative;
+  margin-bottom: 5rem;
+  padding: 2rem 0;
+  font-size: 3rem;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: .5em;
+  font-family: 'Lora', serif;
+  color: var(--med-blue);
+  letter-spacing: 0.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+
+
+/* =========================================
+                Buttons
+============================================ */
+
+.btn-general {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0 .375em;
+  padding: 12px 46px 12px 46px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+}
+
+.btn-general:hover,
+.btn-general:focus {
+  cursor: pointer;
+}
+
+.btn-home {
+  color: #fff;
+  border: 1px solid #fff;
+  background: linear-gradient(115deg, transparent 0%, transparent 50%, var(--white) 50%);
+  background-size: 220%;
+  transition: all .4s;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -ms-transition: all .4s;
+  -o-transition: all .4s;
+}
+
+.btn-home:hover,
+.btn-home:focus {
+  cursor: pointer;
+  color: var(--med-blue);
+  background-position: 100%;
+  transform: translateX(1rem);
+  -webkit-transform: translateX(1rem);
+  -moz-transform: translateX(1rem);
+  -ms-transform: translateX(1rem);
+  -o-transform: translateX(1rem);
+}
+
+.btn-blue {
+  background: linear-gradient(115deg, transparent 0%, transparent 50%, var(--med-gray) 50%);
+  background-size: 220%;
+  transition: all .4s;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -ms-transition: all .4s;
+  -o-transition: all .4s;
+}
+
+.btn-blue:hover,
+.btn-blue:focus {
+  cursor: pointer;
+  color: var(--light-blue);
+  background-position: 100%;
+
+}
+
+/* =========================================
+              Contact
+============================================ */
+#contact {
+  padding-bottom: 2.5em;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: var(--light-gray);
+}
+
+#contact .section__title--text {
+  margin-bottom: -2em;
+}
+
+#section__title--paragraph {
+  margin-bottom: 1em;
+  padding-bottom: 2em;
+}
+
+.section__title--paragraph {
+  text-align: center;
+}
+
+#title-paragraph {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+#contact__form--reusable {
+  display: block;
+}
+
+#contact__form--group {
+  margin: 0 auto;
+  width: 75%;
+  max-width: 960px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.125rem;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+form .contact__form {
+  position: relative;
+  margin-bottom: 3em;
+  padding-bottom: 1em;
+}
+form .contact__form:nth-child(3) {
+  margin-bottom: 1em;
+  padding-bottom: 0;
+}
+form .contact__form:nth-child(4) {
+  margin-bottom: 0;
+}
+
+form .contact__form--text {
+  position: relative;
+  width: 100%;
+  height: 45px;
+  margin-bottom: 2em;
+  display: block;
+  color: var(--off-black);
+  background: transparent;
+  border: none;
+  outline: none;
+  border-color: #000;
+  border-bottom: 1px solid var(--med-blue);
+  border-width: 0 0 2px 0;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+form .contact__form:nth-child(3) {
+  margin-bottom: 1em;
+}
+
+form .contact__form--text:nth-child(4) {
+  margin-bottom: .5em;
+  padding-bottom: .5em;
+}
+
+.contact__form .contact__form--label {
+  position: absolute;
+  left: 3px;
+  bottom: 55px;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  color: var(--dark-gray);
+  cursor: text;
+  transition: transform 0.2s ease-in-out;
+  -webkit-transition: transform 0.2s ease-in-out;
+  -moz-transition: transform 0.2s ease-in-out;
+  -ms-transition: transform 0.2s ease-in-out;
+  -o-transition: transform 0.2s ease-in-out;
+}
+
+.contact__form:nth-child(3) .contact__form--label {
+  bottom: 3px;
+}
+
+.contact__form .contact__form--text:focus+.contact__form--label,
+.contact__form .contact__form--text.not-empty+.contact__form--label {
+  transform: scale(.80) translateY(-50px);
+  -webkit-transform: scale(.80) translateY(-50px);
+  -moz-transform: scale(.80) translateY(-50px);
+  -ms-transform: scale(.80) translateY(-50px);
+  -o-transform: scale(.80) translateY(-50px);
+}
+
+.contact__form .contact__form--prompt {
+  position: absolute;
+  left: 3px;
+  bottom: 30px;
+  display: block;
+}
+
+.contact__form:nth-child(3) .contact__form--prompt {
+  bottom: -25px;
+}
+
+
+form .submit {
+  height: 75px;
+  margin-bottom: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: var(--med-blue);
+  color: var(--light-gray);
+  background-image: linear-gradient(115deg, transparent 0%, transparent 50%, var(--med-gray) 50%);
+  background-size: 220%;
+  border-color: transparent;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  transition: all .5s;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -ms-transition: all .5s;
+  -o-transition: all .5s;
+}
+
+form .submit:hover {
+  cursor: pointer;
+  color: var(--med-blue);
+  border: 1px solid var(--med-gray);
+  background-position: 100%;
+}
+
+#error__message,
+#success__message {
+  width: 100%;
+  height: fit-content;
+  margin-bottom: .5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-align: center;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+#success__message {
+  display: none;
+
+}
+
+#error__message {
+  display: none;
+  
+}
+
+#error__message {
+  /* background-color: #7c0d23; */
+  background-color: #9a0220;
+  color: var(--white);
+  opacity: 0.8;
+}
+
+#success__message {
+  /* background-color: #0f7c0d; */
+  background-color: #335536;
+  color: var(--white);
+  opacity: 1;
+
+}
+
+#error__message h4,
+#success__message h4 {
+  font-family: 'Lora', serif;
+  font-size: 1.3rem;
+  letter-spacing: 4px;
+}
+
+#error__message p,
+#success__message p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}

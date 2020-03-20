@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Simple Contact Form</title>
+
+      <!--favicon -->
+      <link rel="shortcut icon" href="favicon.ico">
+      <!--google fonts-->
+      <link href="https://fonts.googleapis.com/css?family=Lora|Montserrat:100,200,400,500&display=swap"
+         rel="stylesheet">
+      <!--normalize css -->
+      <link rel="stylesheet" href="css/normalize.css">
+      <!-- jquery css -->
+      <link rel="stylesheet" href="css/jquery-ui.min.css">
+      <!--main css-->
+      <link rel="stylesheet" href="css/style.css">
+
+   </head>
+   <body>
+      <section id="contact" class="section">
+         <div class="ma-container">
+            <div class="section__title--text">
+               <h2 class="title-heading"><strong>Contact Me</strong></h2>
+            </div>
+            <div id="section__title--paragraph" class="section__title--paragraph">
+               <h5 id="title-paragraph">If you have any questions or wish to collaborate, send me a message!</h5>
+            </div>
+            <!-- begin of contact form -->
+            <div id="contact__form--group">
+               <form id="contact__form--reusable" action="">
+                  <div class="contact__form">
+                     <input type="text" name="name" id="contact__form--name" class="contact__form--text js-input">
+                     <label for="name" class="contact__form--label">Name</label>
+                     <label for="name" id="contact__form--name-prompt" class="contact__form--prompt">&nbsp;</label>
+                  </div>
+                  <div class="contact__form">
+                     <input type="email" name="email" id="contact__form--email" class="contact__form--text js-input">
+                     <label for="email" class="contact__form--label">Email</label>
+                     <label for="" id="contact__form--email-prompt" class="contact__form--prompt">&nbsp;</label>
+                  </div>
+                  <div class="contact__form">
+                     <textarea type="textarea" maxlength="151" name="message" id="contact__form--message"
+                        class="contact__form--text js-input" rows="3"></textarea>
+                     <label for="message" class="contact__form--label">Message</label>
+                     <label for="" id="contact__form--message-prompt" class="contact__form--prompt">&nbsp;</label>
+                  </div>
+                  <div id="error__message">
+                     <h4>Error!</h4>
+                     <p>The following are error(s) in the form:</p>
+                  </div>
+                  <div id="success__message">
+                     <h4>Success!</h4>
+                     <p>Your message was sent successfully.</p>
+                  </div>
+                  <div class="contact__form">
+                     <input type="button" id="contact__form--submit" class="contact__form--text submit"
+                        value="Send Message">
+                  </div>
+               </form>
+            </div>
+            <!-- end of contact form -->
+         </div>
+      </section>
+
+      <!--jquery-->
+      <script src="js/jquery-3.4.1.min.js"></script>
+      <!-- jquery ui -->
+      <script src="js/jquery-ui.min.js"></script>
+      <!--main js-->
+      <script src="js/script.js"></script>
+
+   </body>
+</html>
