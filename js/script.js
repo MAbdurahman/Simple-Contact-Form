@@ -153,31 +153,42 @@ $(function () {
 
    //updateErrors Function -
    function updateErrors() {
+      let message = "";
       $('#error__message').html(`<h4>Error!</h4>
                   <p>The following are error(s) in the form:</p>`);
 
       if (!isNameValid) {
          if ($('#contact__form--name').val().length == 0) {
             $('#error__message').append(`<p>Your first and last name is required!!</p>`);
+            message = "Your first and last name is required!";
+            getPrompt(message, "contact__form--name-prompt", red);
 
          } else {
             $('#error__message').append(`<p>Enter first and last name only!!</p>`);
+            message = "Enter first and last name only!";
+            getPrompt(message, "contact__form--name-prompt", red);
+
          }
       }
       if (!isEmailValid) {
          if ($('#contact__form--email').val().length == 0) {
             $('#error__message').append(`<p>Your email address is required!!</p>`);
+            message = "Your email address is required!";
+            getPrompt(message, "contact__form--email-prompt", red);
 
          } else {
             $('#error__message').append(`<p>Your email address is Invalid!!</p>`);
-
+            message = "Invalid email address!";
+            getPrompt(message, "contact__form--email-prompt", red);
          }
       }
       if (!isMessageValid) {
          let characters_left = (required_message_length - $('#contact__form--message').val().length);
-         let message = characters_left + " more characters required in message";
+         let messageData = characters_left + " more characters required in message!!";
 
-         $('#error__message').append(`<p>${message}!!</p>`);
+         $('#error__message').append(`<p>${messageData}</p>`);
+         message = characters_left + " more characters required in message!";
+         getPrompt(message, "contact__form--message-prompt", red);
 
       }
    } //end of the updateErrors Function
