@@ -394,7 +394,10 @@ form .contact__form--text:nth-child(4) {
   line-height: 1.5;
   color: var(--dark-gray);
   cursor: text;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
   -webkit-transition: transform 0.2s ease-in-out;
   -moz-transition: transform 0.2s ease-in-out;
   -ms-transition: transform 0.2s ease-in-out;
@@ -459,6 +462,8 @@ form .submit:hover {
 #error__message,
 #success__message {
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   margin-bottom: .5em;
   padding-top: 1em;
